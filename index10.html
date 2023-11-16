@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    Площа трикутника (S) = (Заснування:
+        <select name="" id="slct">
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="120">120</option> 
+        </select>
+        * Висота:
+        <select name="" id="slct1">
+            <option value="30">30</option>
+            <option value="60">60</option>
+            <option value="130">130</option>
+            <option value="150">150</option>
+        </select>
+        ) : 2
+    <p id="res"></p>
+    Об'єм циліндра (V) = π * Радіус основи (
+        <select name="" id="radius">
+            <option value="5">5</option>
+            <option value="30">30</option>
+            <option value="60">60</option>
+            <option value="90">90</option>
+        </select>
+        )² * Висота (
+        <select name="" id="height">
+            <option value="10">10</option>
+            <option value="35">35</option>
+            <option value="65">65</option>
+            <option value="95">95</option>
+        </select>
+        )
+        <p id="rad_hei"></p>
+    Площа поверхні циліндра (A) = 2 * π * Радіус основи (
+        <select name="" id="radius_main">
+            <option value="10">10</option>
+            <option value="35">35</option>
+            <option value="65">65</option>
+            <option value="95">95</option>
+        </select>
+        ) * (Радіус основи + Висота (
+            <select name="" id="height_main">
+                <option value="10">10</option>
+                <option value="35">35</option>
+                <option value="65">65</option>
+                <option value="95">95</option>
+            </select>
+        ))
+        <p id="rad_hei_main"></p>
+        Обчислення обсягу сфери (V)=3/4π Радіус сфери(
+            <select name="" id="radius_circel">
+                <option value="10">10</option>
+                <option value="35">35</option>
+                <option value="65">65</option>
+                <option value="95">95</option>
+            </select>
+            )3
+        <p id="answer"></p>
+        Об'єм куба: (V) = Довжина ребра (
+            <select name="" id="kub">
+                <option value="20">20</option>
+                <option value="40">40</option>
+                <option value="60">60</option>
+                <option value="80">80</option>
+            </select>
+        )3
+        <p id="res3"></p>
+    <script>
+        kub = document.getElementById("kub");
+        res3 = document.getElementById("res3");
+
+        radius_circel = document.getElementById("radius_circel");
+        answer = document.getElementById("answer");
+
+        radius_main = document.getElementById("radius_main");
+        height_main = document.getElementById("height_main");
+        rad_hei_main = document.getElementById("rad_hei_main");
+
+        radius = document.getElementById("radius");
+        height = document.getElementById("height");
+        rad_hei = document.getElementById("rad_hei");
+
+        slct = document.getElementById("slct");
+        slct1 = document.getElementById("slct1");
+        res = document.getElementById("res");
+
+        radius_main.addEventListener("change", fnc3);
+        height_main.addEventListener("change", fnc3);
+
+        slct.addEventListener("change", fnc);
+        slct1.addEventListener("change", fnc);
+
+        radius.addEventListener("change", fnc1);
+        height.addEventListener("change", fnc1);
+
+        radius_circel.addEventListener("change", fnc4);
+
+        kub.addEventListener("change", fnc10);
+
+        function fnc() {
+            slct_value = parseInt(slct.value); 
+            slct1_value = parseInt(slct1.value);
+
+            result_s = (slct_value * slct1_value) / 2;
+            res.innerHTML = ("Відповідь: " + result_s); 
+        }
+        function fnc1(){
+            radius_value = parseInt(radius.value); 
+            height_value = parseInt(height.value);
+
+            result_v = Math.PI * (radius_value * radius_value) * height_value;
+            rad_hei.innerHTML = ("Відповідь: " + result_v); 
+        }
+        function fnc3(){
+            radius_main_value = parseInt(radius_main.value); 
+            height_main_value = parseInt(height_main.value);
+
+            result_a = 2 * Math.PI * radius_main_value * (radius_main_value + height_main_value)
+            rad_hei_main.innerHTML = ("Відповідь: " + result_a); 
+        }
+        function fnc4(){
+            radius_circel_value = parseInt(radius_circel.value);
+            result_v_v = (3/4) * Math.PI * (radius_circel_value * radius_circel_value * radius_circel_value);
+
+            answer.innerHTML = ("Відповідь: " + result_v_v); 
+        }
+        function fnc10(){
+            kub_value = parseInt(kub.value);
+            result_w_w = (kub_value * kub_value * kub_value);
+
+            res3.innerHTML = ("Відповідь: " + result_w_w); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>У Полотняній країні
+        Річкою Простиною
+        Пливе пароплав
+        То назад, то вперед
+        А за ним така гладь
+        Ні зморшки не видно.</h1>
+    <button id = "btn">Відповідь</button>
+    <p id="res"></p>
+    <h2>У черевці - лазня,
+        У носі - решето,
+        Ніс - хоботок,
+        На голові - пупок,
+        Усього одна рука
+        Без пальчиків
+        І та — на спині
+        Калачик.</h2>
+    <button id = "btn1">Відповідь</button>
+    <p id="res1"></p>
+    <h2>У черевці - лазня,
+        У носі - решето,
+        Ніс - хоботок,
+        На голові - пупок,
+        Усього одна рука
+        Без пальчиків
+        І та — на спині
+        Калачик.</h2>
+    <button id = "btn2">Відповідь</button>
+    <p id="res2"></p>
+    
+    <script>
+        btn = document.getElementById("btn")
+        res = document.getElementById("res")
+        btn1 = document.getElementById("btn1")
+        res1 = document.getElementById("res1")
+        btn2 = document.getElementById("btn2")
+        res2 = document.getElementById("res2")
+        
+        btn2.addEventListener("click", fnc3)
+        btn1.addEventListener("click", fnc2)
+        btn.addEventListener("click", fnc1)
+        function fnc1(){
+            res.innerHTML = "Праска"
+        }
+        function fnc2(){
+            res1.innerHTML = "Утюг"
+        }
+        function fnc3(){
+            res2.innerHTML = "Рік"
+        }
+    </script>
+</body>
+</html>

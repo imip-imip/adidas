@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <h1>Простые загадки</h1>
+    </div>
+    <div class="menu">
+        <p><b>У Полотняній країні<br>
+            Річкою Простиною<br>
+            Пливе пароплав<br>
+            То назад, то вперед,<br>
+            А за ним така гладь<br>
+            Ні зморшки не видно..</b></p>
+    </div>
+    <div class="center">
+        <button id = "btn">Відповідь</button>
+    </div>
+    <div class="menu">
+        <p><b>У черевці - лазня,,<br>
+            У носі - решето,<br>
+            Ніс - хоботок,<br>
+            На голові - пупок,<br>
+            Усього одна рука<br>
+            Без пальчиків<br>
+            І та — на спині<br>
+            Калачик.</b></p>
+    </div>
+    <div class="center1">
+        <button id = "btn1">Відповідь</button>
+    </div>
+    <div class="menu">
+        <p><b>Стоїть дуб,<br>
+            У ньому дванадцять гнізд.<br>
+            У кожному гнізді<br>
+            По чотири яйця,<br>
+            У кожному яйці<br>
+            По семи курча.</b></p>
+    </div>
+    <div class="center1">
+        <button id = "btn2">Відповідь</button>
+    </div>
+    <div class="menu">
+        <p><b>У синьому небі світляки<br>
+            Чи не дотягнеш до них руки<br>
+            А один великий світляк<br>
+            Зігнувся, як черв'як.</b></p>
+    </div>
+    <div class="center1">
+        <button id = "btn3">Відповідь</button>
+    </div>
+    <div class="menu">
+        <p><b>Раптом із чорної темряви<br>
+            У небі виросли кущі<br>
+            А на них блакитні.<br>
+            червоні, золоті<br>
+            Розпускаються квіти<br>
+            Небувалої краси.<br>
+            І всі вулиці під ними<br>
+            Також стали блакитними.<br>
+            Чорними, золотими,<br>
+            Різнокольорові.</b></p>
+    </div>
+    <div class="center1">
+        <button id = "btn4">Відповідь</button>
+    </div>
+    <p id="res1"></p>
+    <p id="res"></p>
+    <script>
+        btn4 = document.getElementById("btn4")
+        btn3 = document.getElementById("btn3")
+        btn2 = document.getElementById("btn2")
+        btn = document.getElementById("btn"); 
+        btn1 = document.getElementById("btn1");
+        r = document.getElementById("res");  
+        r1 = document.getElementById("res1");
+
+        btn4.addEventListener("click", fnc4)
+        btn3.addEventListener("click", fnc3)
+        btn2.addEventListener("click", fnc2);
+        btn1.addEventListener("click", fnc1);
+        btn.addEventListener("click",fnc);  
+        function fnc(){
+            btn.textContent = "Праска"
+        }
+        function fnc1(){
+            btn1.textContent = "Утюг"
+        }
+        function fnc2(){
+            btn2.textContent = "Рік"
+        }
+        function fnc3(){
+            btn3.textContent = "Зірки і місяць"
+        }
+        function fnc4(){
+            btn4.textContent = "Салют"
+        }
+    </script>
+</body>
+</html>

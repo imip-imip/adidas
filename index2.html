@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<body>
+    <div class="menu">
+        <h1>Завдання 1: У кулінарній книзі написано, що для варення з малини потрібно на 3 ягід взяти дві частини цукру. Скільки цукру потрібно взяти на 9 кг ягід?</h1>
+        <h2>Завдання 2: Для дитячих новорічних подарунків було закуплено шоколадні цукерки та карамель – всього 20 кг. Скільки було закуплено цукерок того іншого сорту, якщо карамелі взяли в 3 рази більше, ніж шоколадних цукерок?</h2>
+    </div>
+    <div class="menu">
+        <button id="btn">Відповідь</button>
+        <button id="btn1">Відповідь</button>
+    </div>
+    <div class="menu">
+        <h2>Задання 3: На шкільній виставці було 60 малюнків. Це були малюнки звірів та птахів. Звірів було вдвічі більше, ніж птахів. Скільки було малюнків звірів?</h2>
+        <h2>Завдання 4: Вчителька роздала 30 книг учням. Половина учнів одержала товсті книги, кожна з яких важить 0.75 кг, а решта – тонкі книги вагою 0.5 кг кожна. Скільки учнів мали товсті книги, якщо загальна вага всіх виданих книг становила 20 кг?</h2>
+    </div>
+    <div class="menu">
+        <button id="btn2">Відповідь</button>
+        <button id="btn3">Відповідь</button>
+    </div>
+    <p id="res"></p>
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <script>
+        btn2 = document.getElementById('btn2');
+        btn3 = document.getElementById('btn3');
+        btn1 = document.getElementById("btn1")
+        btn = document.getElementById('btn');
+        
+        r2 = document.getElementById("res2");
+        r3 = document.getElementById("res3");
+        r = document.getElementById("res");
+        r1 = document.getElementById("res1")
+
+        btn.addEventListener("click", fnc);
+        function fnc(){
+            r.innerHTML = "1: 6 кг";
+        }
+        btn1.addEventListener("click", fnc1);
+        function fnc1(){
+            r1.innerHTML = "2: 15 кг ";
+        }
+        btn2.addEventListener("click", fnc2)
+        function fnc2(){
+            r2.innerHTML = "3: 40"
+        }
+        btn3.addEventListener("click", fnc3)
+        function fnc3(){
+            r3.innerHTML = "4: 12"
+        }
+    </script>
+</body>
+</html>

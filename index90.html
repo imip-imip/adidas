@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    S = ширина (
+        <select name="" id="rad">
+            <option value="30">30</option>
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="25">25</option>
+        </select>
+        ) * висота (
+            <select name="" id="bal">
+                <option value="5">5</option>
+                <option value="14">14</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+            </select>
+        )
+        <p id="res"></p>
+    <script>
+        rad = document.getElementById("rad")
+        bal = document.getElementById("bal")
+        res = document.getElementById("res")
+
+        rad.addEventListener("change", fnc)
+        bal.addEventListener("change", fnc)
+
+        function fnc(){
+            rad_value = parseInt(rad.value)
+            bal_value = parseInt(bal.value)
+            
+            console.log(rad_value * bal_value )
+            if (rad_value * bal_value == 50){
+                res.innerHTML = "Площа дорівнює 50cm2"
+            } else{
+                res.innerHTML = "Площа не дорівнює 50cm2"
+            }
+        }
+    </script>
+</body>
+</html>

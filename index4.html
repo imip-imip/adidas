@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Зробити статичні (HTML) елементи -->
+    <select name="" id="slct">
+        <option value="Вова">Вова</option>
+        <option value="Софія">Софія</option>
+        <option value="Bonzi">Bonzi</option>
+        <option value="Тимофій">Тимофій</option>
+    </select>
+
+    <script>
+        //Зв'язуємо елементи зі змінними
+        s = document.getElementById("slct");
+
+        // Становлюємо подію, яка запускає дії.
+        // Беремо елемент і визначаємо йому дію.
+        s.addEventListener("change",f);
+
+        function f(){
+            alert("HI " + s.value);
+        }
+
+    </script>
+</body>
+</html>
