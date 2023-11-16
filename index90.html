@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <p>В ведіть ширину та висоту так щоб дорівнювала 50</p><br>
     S = ширина (
         <select name="" id="rad">
             <option value="30">30</option>
@@ -22,13 +23,15 @@
             </select>
         )
         <p id="res"></p>
+        <button id="button">Перевірити</button>
     <script>
+        btn = document.getElementById("button")
+
         rad = document.getElementById("rad")
         bal = document.getElementById("bal")
         res = document.getElementById("res")
 
-        rad.addEventListener("change", fnc)
-        bal.addEventListener("change", fnc)
+        btn.addEventListener("click", fnc)
 
         function fnc(){
             rad_value = parseInt(rad.value)
@@ -36,9 +39,9 @@
             
             console.log(rad_value * bal_value )
             if (rad_value * bal_value == 50){
-                res.innerHTML = "Площа дорівнює 50cm2"
+                res.innerHTML = "Вірно"
             } else{
-                res.innerHTML = "Площа не дорівнює 50cm2"
+                res.innerHTML = "Не вірно"
             }
         }
     </script>
